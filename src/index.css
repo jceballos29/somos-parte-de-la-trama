@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .page {
+    @apply w-full h-screen max-h-full p-6 pb-20 flex flex-col;
+  }
+
+  .slide-in {
+    @apply fixed top-0 left-0 w-full h-screen origin-bottom;
+  }
+
+  .slide-in {
+    @apply fixed top-0 left-0 w-full h-screen origin-top;
+  }
+}

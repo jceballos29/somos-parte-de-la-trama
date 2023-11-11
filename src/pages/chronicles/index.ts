@@ -1,0 +1,1 @@
+export { default as Chronicles } from './chronicles';
