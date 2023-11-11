@@ -61,7 +61,7 @@ const Modal: React.FC<ModalProps> = ({
 				animate={{ opacity: 1, visibility: 'visible' }}
 				exit={{ opacity: 0, visibility: 'hidden' }}
 				transition={{ duration: 0.3 }}
-				className={`fixed z-20 top-0 left-0 w-full h-screen overflow-hidden bg-black/70 backdrop-blur-sm flex items-center justify-center`}
+				className={`fixed z-20 top-0 left-0 w-full h-[100dvh] overflow-hidden bg-black/70 backdrop-blur-sm flex items-center justify-center`}
 			>
 				<button
 					className='absolute top-4 right-4 rounded-full bg-white/50 backdrop-blur-sm p-1'
