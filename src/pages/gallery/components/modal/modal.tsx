@@ -64,7 +64,7 @@ const Modal: React.FC<ModalProps> = ({
 				className={`fixed z-20 top-0 left-0 w-full h-[100dvh] overflow-hidden bg-black/70 backdrop-blur-sm flex items-center justify-center`}
 			>
 				<button
-					className='absolute top-4 right-4 rounded-full bg-white/50 backdrop-blur-sm p-1'
+					className='absolute top-14 left-1/2 -translate-x-1/2 z-20 rounded-full border-2 border-white bg-black/50 shadow backdrop-blur-sm p-1'
 					onClick={() => onClose()}
 				>
 					<XMarkIcon className='h-6 w-6 text-white' />
@@ -74,7 +74,7 @@ const Modal: React.FC<ModalProps> = ({
 					animate={{ scale: 1 }}
 					exit={{ scale: 0.5 }}
 					transition={{ duration: 0.3 }}
-					className='bg-white w-11/12 rounded-md overflow-hidden relative'
+					className='bg-black w-[90%] h-max-[90%] flex flex-col items-center rounded-md overflow-hidden relative'
 				>
 					<button
 						className='absolute left-0 top-1/2 -translate-y-1/2 h-full'
@@ -91,7 +91,7 @@ const Modal: React.FC<ModalProps> = ({
 					<img
 						src={image?.image}
 						alt={`Somos parte de la trama ${image?.key}`}
-						className='w-full'
+						className='object-contain object-center'
 					/>
 				</motion.figure>
 			</motion.div>

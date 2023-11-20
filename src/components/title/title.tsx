@@ -6,7 +6,7 @@ export interface TitleProps {
 }
 
 const Title: React.FC<TitleProps>  = ({ title }) => {
-	return <div className='w-full flex items-center justify-between mb-8 '>
+	return <div className='w-full flex items-center justify-between mb-5'>
 		<h2 className='text-3xl font-bold'>{ title }</h2>
 		<figure className='h-10 overflow-hidden'>
 			<img src={somosParte} alt='Somos parte de la trama' className='h-full'/>
