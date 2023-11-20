@@ -4,7 +4,7 @@
 
 @layer components {
   .page {
-    @apply w-full h-screen max-h-full p-6 pb-20 flex flex-col;
+    @apply w-full h-screen max-h-full pt-6 p-4 pb-16 flex flex-col;
   }
 
   .slide-in {
