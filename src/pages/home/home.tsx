@@ -3,10 +3,11 @@ import cultureLogo from '@/assets/images/nos-mueve-la-cultura.png';
 import pdlPpLogo from '@/assets/images/pdl-pp.png';
 import somosParte from '@/assets/images/somos-parte-de-la-trama.png';
 import townHall from '@/assets/images/town-hall-logo.png';
+import { Page } from '@/components';
 
 const Home = () => {
 	return (
-		<div className='page justify-between'>
+		<Page className='justify-between'>
 			<section className='w-ful flex items-center justify-between'>
 				<figure className='overflow-hidden h-10'>
 					<img
@@ -46,7 +47,7 @@ const Home = () => {
 					/>
 				</figure>
 			</section>
-		</div>
+		</Page>
 	);
 };
 

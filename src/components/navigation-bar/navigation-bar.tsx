@@ -1,6 +1,8 @@
 import { pages } from '@/utils';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { PageType } from '@/types';
 
 export interface NavigationBarProps {}
 
@@ -8,9 +10,21 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
 	const location = useLocation();
 
 	return (
-		<nav className='fixed flex w-full z-10 bottom-0 left-1/2 -translate-x-1/2 p-2'>
-			<ul className='w-80 mx-auto rounded-full py-1 bg-slate-50/40 backdrop-blur flex items-center justify-center space-x-1 duration-500 transition-all shadow-md shadow-slate-950/20'>
-				{pages.map((page) => (
+		<motion.nav
+			className='fixed flex w-full z-10 bottom-0 left-1/2 -translate-x-1/2 px-4 py-2'
+			initial={{
+				bottom: '-20%',
+			}}
+			animate={{
+				bottom: 0,
+				transition: {
+					duration: 0.5,
+					ease: 'easeInOut',
+				},
+			}}
+		>
+			<ul className='w-full w-max-80 mx-auto rounded-full py-1 bg-slate-50/40 backdrop-blur-sm flex items-center justify-center space-x-3 duration-500 transition-all shadow-xl'>
+				{pages.map((page: PageType) => (
 					<Link
 						key={page.name}
 						to={page.url}
@@ -26,15 +40,11 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
 							<div
 								className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 ${
 									location.pathname === page.url
-										? 'w-full h-full opacity-100 bg-slate-50/60 backdrop-blur-md border-slate-600 shadow-md shadow-slate-400'
+										? 'w-full h-full opacity-100 bg-slate-50/40 backdrop-blur-md border-slate-600 shadow-md shadow-slate-400'
 										: 'w-2 h-2 opacity-0 bg-transparent border-transparent '
 								} duration-500 transition-all`}
 							/>
-							{location.pathname === page.url ? (
-								<page.icons.solid className='relative z-10 h-6 w-6' />
-							) : (
-								<page.icons.outline className='h-6 w-6' />
-							)}
+							<page.icon className='relative z-10 h-6 w-6' />
 						</figure>
 						<span
 							className={`text-sm absolute capitalize top-1/2  ${
@@ -48,7 +58,7 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
 					</Link>
 				))}
 			</ul>
-		</nav>
+		</motion.nav>
 	);
 };
 

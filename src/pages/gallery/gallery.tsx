@@ -1,4 +1,4 @@
-import { Title } from '@/components';
+import { Page, Title } from '@/components';
 import { ImageType, gallery } from '@/utils/gallery';
 import React from 'react';
 import { Image, Modal } from './components';
@@ -16,7 +16,7 @@ const Gallery: React.FC<GalleryProps> = () => {
 		React.useState<GalleryState['currentImageIndex']>(0);
 
 	return (
-		<div className='page relative'>
+		<Page className='relative'>
 			<Modal
 				images={gallery}
 				index={currentImageIndex}
@@ -38,7 +38,7 @@ const Gallery: React.FC<GalleryProps> = () => {
 						/>
 					))}
 			</section>
-		</div>
+		</Page>
 	);
 };
 
