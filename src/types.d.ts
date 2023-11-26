@@ -70,3 +70,11 @@ export type Controls = {
   setTrack: (track: Track) => void;
 	cleanup: () => void;
 };
+
+export type ImageType = {
+  key: number;
+  image: {
+    mini: string;
+    full: string;
+  }
+}

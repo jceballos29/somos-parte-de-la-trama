@@ -1,7 +1,8 @@
 import { Page, Title } from '@/components';
-import { ImageType, gallery } from '@/utils/gallery';
+import { gallery } from '@/utils/gallery';
 import React from 'react';
 import { Image, Modal } from './components';
+import { ImageType } from '@/types';
 
 export interface GalleryProps {}
 
@@ -29,7 +30,7 @@ const Gallery: React.FC<GalleryProps> = () => {
 					gallery.map((item: ImageType, index: number) => (
 						<Image
 							key={index}
-							image={item.image}
+							image={item.image.mini}
 							index={item.key}
 							setIndex={(value: number) => {
 								setCurrentImageIndex(value);

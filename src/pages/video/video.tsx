@@ -1,14 +1,15 @@
 import React from 'react';
-import information from '@/assets/images/information.png';
-import cultureLogo from '@/assets/images/nos-mueve-la-cultura.png';
-import pdlPpLogo from '@/assets/images/pdl-pp.png';
-import townHall from '@/assets/images/town-hall-logo.png';
+import information from '@/assets/images/information.webp';
+import cultureLogo from '@/assets/images/nos-mueve-la-cultura.webp';
+import pdlPpLogo from '@/assets/images/pdl-pp.webp';
+import townHall from '@/assets/images/town-hall-logo.webp';
+import { Page } from '@/components';
 
 export interface VideoProps {}
 
 const Video: React.FC<VideoProps> = () => {
 	return (
-		<div className='page'>
+		<Page>
 			<div className='w-ful flex items-center justify-between'>
 				<figure className='overflow-hidden h-10'>
 					<img
@@ -41,7 +42,7 @@ const Video: React.FC<VideoProps> = () => {
 					/>
 				</figure>
 			</div>
-		</div>
+		</Page>
 	);
 };
 

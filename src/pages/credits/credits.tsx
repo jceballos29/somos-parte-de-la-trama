@@ -1,7 +1,7 @@
-import information from '@/assets/images/information.png';
-import clubLogo from '@/assets/images/la-marana-logo.png';
-import townHall from '@/assets/images/town-hall-logo.png';
-import { Title } from '@/components';
+import information from '@/assets/images/information.webp';
+import clubLogo from '@/assets/images/la-marana-logo.webp';
+import townHall from '@/assets/images/town-hall-logo.webp';
+import { Page, Title } from '@/components';
 import { artisans } from '@/utils';
 import React from 'react';
 
@@ -9,7 +9,7 @@ export interface CreditsProps {}
 
 const Credits: React.FC<CreditsProps> = () => {
 	return (
-		<div className='page'>
+		<Page>
 			<Title title='Créditos' />
 			<figure className='w-1/2 mx-auto overflow-hidden rounded-xl'>
 				<img src={clubLogo} alt='La maraña' className='w-full' />
@@ -55,7 +55,7 @@ const Credits: React.FC<CreditsProps> = () => {
 					/>
 				</figure>
 			</section>
-		</div>
+		</Page>
 	);
 };
 

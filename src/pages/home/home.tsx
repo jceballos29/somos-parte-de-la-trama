@@ -1,8 +1,8 @@
-import information from '@/assets/images/information.png';
-import cultureLogo from '@/assets/images/nos-mueve-la-cultura.png';
-import pdlPpLogo from '@/assets/images/pdl-pp.png';
-import somosParte from '@/assets/images/somos-parte-de-la-trama.png';
-import townHall from '@/assets/images/town-hall-logo.png';
+import information from '@/assets/images/information.webp';
+import cultureLogo from '@/assets/images/nos-mueve-la-cultura.webp';
+import pdlPpLogo from '@/assets/images/pdl-pp.webp';
+import somosParte from '@/assets/images/somos-parte-de-la-trama.webp';
+import townHall from '@/assets/images/town-hall-logo.webp';
 import { Page } from '@/components';
 
 const Home = () => {

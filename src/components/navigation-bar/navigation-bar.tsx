@@ -23,7 +23,7 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
 				},
 			}}
 		>
-			<ul className='w-full w-max-80 mx-auto rounded-full py-1 bg-slate-50/40 backdrop-blur-sm flex items-center justify-center space-x-3 duration-500 transition-all shadow-xl'>
+			<ul className='w-full w-max-80 mx-auto rounded-full py-1 bg-slate-50/40 backdrop-blur-sm flex items-center justify-center space-x-2 duration-500 transition-all shadow-xl'>
 				{pages.map((page: PageType) => (
 					<Link
 						key={page.name}

@@ -1,5 +1,5 @@
 import React from 'react';
-import somosParte from '@/assets/images/somos-parte-de-la-trama.png';
+import somosParte from '@/assets/images/somos-parte-de-la-trama.webp';
 
 export interface TitleProps {
 	title: string;

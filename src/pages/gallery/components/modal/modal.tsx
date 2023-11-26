@@ -1,4 +1,5 @@
-import { ImageType } from '@/utils';
+
+import { ImageType } from '@/types';
 import {
 	ChevronLeftIcon,
 	ChevronRightIcon,
@@ -29,7 +30,10 @@ const Modal: React.FC<ModalProps> = ({
 		ModalState['currentImage']
 	>({
 		key: 0,
-		image: '',
+		image: {
+			full: '',
+			mini: '',
+		},
 	});
 
 	const next = () => {
@@ -89,7 +93,7 @@ const Modal: React.FC<ModalProps> = ({
 						<ChevronRightIcon className='h-10 w-10 text-white' />
 					</button>
 					<img
-						src={image?.image}
+						src={image?.image.full}
 						alt={`Somos parte de la trama ${image?.key}`}
 						className='object-contain object-center'
 					/>

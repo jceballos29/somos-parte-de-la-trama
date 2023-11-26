@@ -1,4 +1,4 @@
-import background from '@/assets/images/background.png';
+import background from '@/assets/images/background.webp';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { NavigationBar } from './components';
 import {
